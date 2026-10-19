@@ -20,14 +20,17 @@ The analysis answers three core commercial questions: **What triggers customer d
 ### 2. Primary Churn Drivers
 * **Top Revenue Drain:** The single most frequently reported reason customers gave for leaving was **Competitor had better devices**, accounting for **313** total lost accounts.
 
-Customer Churn Analysis/output of sql/Screenshot 2026-10-19 230905.png
+ ![Telecom Customer Churn Overview](<output of sql/Screenshot 2026-10-19 230905.png>)
 * **Infrastructure Risks:** Subscribers utilizing **Fiber Optic** internet churned at a significantly higher rate (**40.72%**) than any other connection tier.
 
-Customer Churn Analysis/output of sql/Screenshot 2026-10-19 230940.png
+ ![Telecom Customer Churn Overview](<output of sql/Screenshot 2026-10-19 230940.png>)
 * **Support Vulnerabilities:** Customers who did **not** opt for **Premium Tech Support** or **Online Security** exhibited a massive churn spike of **48.96%**, identifying a critical service gap.
 
-Customer Churn Analysis/output of sql/Screenshot 2026-10-19 231013.png
+
+![Telecom Customer Churn Overview](<output of sql/Screenshot 2026-10-19 231013.png>)
 * **Billing Friction:** The highest channel attrition occurred among users paying via **Mailed Check** at **36.88%**.
+
+Customer Churn Analysis/output of sql/Screenshot 2026-10-19 231056.png
 
 ### 3. High-Value Account Leakage
 * Using SQL window functions (`NTILE(4)`), a deep-dive segmentation isolated the highest-paying 25% billing bracket.
