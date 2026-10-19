@@ -21,8 +21,8 @@ The analysis answers three core commercial questions: **What triggers customer d
 
 ### 3. High-Value Account Leakage
 * Using SQL window functions (`NTILE(4)`), a deep-dive segmentation isolated the highest-paying 25% billing bracket.
-* The company lost **1869** top-tier customers, resulting in an immediate drop of **\$6174** in **Monthly Recurring Revenue (MRR)**.
-* This high-value segment accounts for a staggering historical revenue loss of **\$'3735.68'**.
+* The company lost **582** top-tier customers, resulting in an immediate drop of **\$57829.95** in **Monthly Recurring Revenue (MRR)**.
+* This high-value segment accounts for a staggering historical revenue loss of **2267922.68**.
 
 ---
 
@@ -55,8 +55,8 @@ WHERE value_quartile = 1 AND `Customer Status` = 'Churned';
 
 ## 📈 Data-Backed Strategic Recommendations
 Based on the hard metrics generated, a business should execute three immediate retention pathways:
-1. **Automated VIP Alerts:** Set up automated database flags for the top 25% billing quartile when their tenure hits the **`[Insert Avg Tenure]`** month danger-zone to deploy proactive loyalty offers.
-2. **Tech Support Inclusions:** Bundle **Premium Tech Support** directly into the **`[Insert High Churn Internet Type]`** internet plans to mitigate the high churn rates seen in unassisted profiles.
+1. **Automated VIP Alerts:** Set up automated database flags for the top 25% billing quartile when their tenure hits the **41** month danger-zone to deploy proactive loyalty offers.
+2. **Tech Support Inclusions:** Bundle **Premium Tech Support** directly into the **Fiber Optic** internet plans to mitigate the high churn rates seen in unassisted profiles.
 3. **Auto-Pay Migration Incentives:** Offer a one-time invoice credit to transition customers using high-friction payment methods over to low-churn automated credit card billing.
 
 ---
