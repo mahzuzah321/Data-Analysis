@@ -23,8 +23,10 @@ The analysis answers three core commercial questions: **What triggers customer d
 Customer Churn Analysis/output of sql/Screenshot 2026-10-19 230905.png
 * **Infrastructure Risks:** Subscribers utilizing **Fiber Optic** internet churned at a significantly higher rate (**40.72%**) than any other connection tier.
 
-
+Customer Churn Analysis/output of sql/Screenshot 2026-10-19 230940.png
 * **Support Vulnerabilities:** Customers who did **not** opt for **Premium Tech Support** or **Online Security** exhibited a massive churn spike of **48.96%**, identifying a critical service gap.
+
+
 * **Billing Friction:** The highest channel attrition occurred among users paying via **Mailed Check** at **36.88%**.
 
 ### 3. High-Value Account Leakage
