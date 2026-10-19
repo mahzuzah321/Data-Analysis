@@ -11,6 +11,8 @@ The analysis answers three core commercial questions: **What triggers customer d
 
 ### 1. The Churn Landscape
 * **Overall Status:** Out of the entire subscriber base, 26.54 % of customers have churned, 67.02% stayed, and 6.45% are newly acquired accounts.
+  ![Alternative Text Description](image-name.png)
+
 * **The Demographics Drop-off:** Churned customers had a remarkably short average lifespan of only 18 months compared to active accounts 41 months.
 
 ### 2. Primary Churn Drivers
