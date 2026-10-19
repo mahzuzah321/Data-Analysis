@@ -37,6 +37,7 @@ The analysis answers three core commercial questions: **What triggers customer d
 * The company lost **582** top-tier customers, resulting in an immediate drop of **\$57829.95** in **Monthly Recurring Revenue (MRR)**.
 * This high-value segment accounts for a staggering historical revenue loss of **2267922.68**.
 
+![Telecom Customer Churn Overview](<output of sql/Screenshot 2026-10-19 233607.png>)
 ---
 
 ## 🛠️ Tools & Advanced SQL Implementations
