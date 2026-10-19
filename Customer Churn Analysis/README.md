@@ -26,7 +26,7 @@ Customer Churn Analysis/output of sql/Screenshot 2026-10-19 230905.png
 Customer Churn Analysis/output of sql/Screenshot 2026-10-19 230940.png
 * **Support Vulnerabilities:** Customers who did **not** opt for **Premium Tech Support** or **Online Security** exhibited a massive churn spike of **48.96%**, identifying a critical service gap.
 
-
+Customer Churn Analysis/output of sql/Screenshot 2026-10-19 231013.png
 * **Billing Friction:** The highest channel attrition occurred among users paying via **Mailed Check** at **36.88%**.
 
 ### 3. High-Value Account Leakage
