@@ -14,6 +14,7 @@ The analysis answers three core commercial questions: **What triggers customer d
   ![Telecom Customer Churn Overview](<output of sql/Screenshot 2026-10-19 230700.png>)
 
 * **The Demographics Drop-off:** Churned customers had a remarkably short average lifespan of only 18 months compared to active accounts 41 months.
+ ![Telecom Customer Churn Overview](<output of sql/Screenshot 2026-10-19 230814.png>)
 
 ### 2. Primary Churn Drivers
 * **Top Revenue Drain:** The single most frequently reported reason customers gave for leaving was **Competitor had better devices**, accounting for **313** total lost accounts.
