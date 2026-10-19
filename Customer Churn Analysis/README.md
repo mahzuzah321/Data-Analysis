@@ -11,18 +11,18 @@ The analysis answers three core commercial questions: **What triggers customer d
 
 ### 1. The Churn Landscape
 * **Overall Status:** Out of the entire subscriber base, 26.54 % of customers have churned, 67.02% stayed, and 6.45% are newly acquired accounts.
-* **The Demographics Drop-off:** Churned customers had a remarkably short average lifespan of only **`[Insert Avg Tenure]`** months compared to active accounts (**`[Insert Active Avg Tenure]`** months).
+* **The Demographics Drop-off:** Churned customers had a remarkably short average lifespan of only 18 months compared to active accounts 41 months.
 
 ### 2. Primary Churn Drivers
-* **Top Revenue Drain:** The single most frequently reported reason customers gave for leaving was **`[Insert Top Churn Reason]`**, accounting for **`[Insert Count]`** total lost accounts.
-* **Infrastructure Risks:** Subscribers utilizing **`[Insert Highest Churn Internet Type, e.g., Fiber Optic]`** internet churned at a significantly higher rate (**`[Insert %]`%**) than any other connection tier.
-* **Support Vulnerabilities:** Customers who did **not** opt for **Premium Tech Support** or **Online Security** exhibited a massive churn spike of **`[Insert %]`%**, identifying a critical service gap.
-* **Billing Friction:** The highest channel attrition occurred among users paying via **`[Insert Highest Churn Payment Method, e.g., Electronic Check]`** at **`[Insert %]`%**.
+* **Top Revenue Drain:** The single most frequently reported reason customers gave for leaving was **Competitor had better devices**, accounting for **313** total lost accounts.
+* **Infrastructure Risks:** Subscribers utilizing **Fiber Optic** internet churned at a significantly higher rate (**40.72%**) than any other connection tier.
+* **Support Vulnerabilities:** Customers who did **not** opt for **Premium Tech Support** or **Online Security** exhibited a massive churn spike of **48.96%**, identifying a critical service gap.
+* **Billing Friction:** The highest channel attrition occurred among users paying via **Mailed Check** at **36.88%**.
 
 ### 3. High-Value Account Leakage
 * Using SQL window functions (`NTILE(4)`), a deep-dive segmentation isolated the highest-paying 25% billing bracket.
-* The company lost **`[Insert Count]`** top-tier customers, resulting in an immediate drop of **\$`[Insert Combined Monthly Charges]`** in **Monthly Recurring Revenue (MRR)**.
-* This high-value segment accounts for a staggering historical revenue loss of **\$`[Insert Historical Total Revenue]`**.
+* The company lost **1869** top-tier customers, resulting in an immediate drop of **\$6174** in **Monthly Recurring Revenue (MRR)**.
+* This high-value segment accounts for a staggering historical revenue loss of **\$'3735.68'**.
 
 ---
 
