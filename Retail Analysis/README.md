@@ -54,7 +54,7 @@ The data quality assessment uses SQL queries to investigate:
 These checks help identify potential data quality issues before interpreting the analytical results.
 
 ### Example: Missing-value assessment
-![Retail Sales Analysis](<output of sql/Screenshot 2026-10-19 230700.png>)
+![Retail Sales Analysis](<Output/Screenshot 2026-10-25 230350.png>)
 
 ## 📊 Sales & Customer Analysis
 
