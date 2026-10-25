@@ -111,7 +111,7 @@ The analysis includes:
 
 ### Power BI Dashboard
 ![Retail Sales Analysis](<Output/Screenshot 2026-10-25 234304.png>)
-![Retail Sales Analysis](<Output/Screenshot 2026-10-25 231021.png>)
+![Retail Sales Analysis](<Output/Screenshot 2026-10-25 234338.png>)
 ![Retail Sales Analysis](<Output/Screenshot 2026-10-25 231021.png>)
 
 ## 💡 Key Skills Demonstrated
