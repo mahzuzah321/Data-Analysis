@@ -1,4 +1,4 @@
-# Retail Sales Data Analysis using SQL
+# Retail Sales Data Analysis using SQL and PowerBi
 
 ## 📌 Project Overview
 
@@ -112,7 +112,7 @@ The analysis includes:
 ### Power BI Dashboard
 ![Retail Sales Analysis](<Output/Screenshot 2026-10-25 234304.png>)
 ![Retail Sales Analysis](<Output/Screenshot 2026-10-25 234338.png>)
-![Retail Sales Analysis](<Output/Screenshot 2026-10-25 231021.png>)
+![Retail Sales Analysis](<Output/Screenshot 2026-10-25 234412.png>)
 
 ## 💡 Key Skills Demonstrated
 
