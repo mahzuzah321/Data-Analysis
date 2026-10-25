@@ -70,7 +70,7 @@ Key analyses include:
 - Countries with the largest customer populations.
 
 ### Example: Top 10 products by quantity sold
-![Retail Sales Analysis](<output of sql/Screenshot 2026-10-19 230700.png>)
+![Retail Sales Analysis](<Output/Screenshot 2026-10-25 230723.png>)
 
 ## 💰 Profitability & Advanced Sales Analysis
 
