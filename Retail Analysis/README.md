@@ -1,43 +1,203 @@
-# Retail Sales Analysis Using SQL and Power BI
+# Retail Sales Data Analysis using SQL
 
-## Project Overview
+## 📌 Project Overview
 
-This project focuses on analyzing retail sales data using SQL and Power BI to uncover meaningful insights into sales performance, customer behavior, product performance, and profitability. The goal is to transform retail data into actionable business insights that help understand purchasing patterns, identify high-performing products and categories, evaluate revenue and profit trends, and support data-driven decision-making.
+This project focuses on analyzing retail sales data using **MySQL** to uncover business insights related to sales performance, customer behavior, product profitability, and revenue trends.
 
-The project uses SQL for data cleaning, data exploration, and business analysis, while Power BI is used to present the findings through interactive dashboards and visual reports. The analysis covers key performance indicators, including total quantity sold, unique orders, customer distribution, monthly sales trends, revenue by product category and brand, country-level revenue, sales channel performance, and profit margins.
+The project includes data quality assessment, duplicate detection, validation of relationships between tables, sales and customer analysis, and advanced profitability analysis.
 
-Advanced analysis is also performed to identify the most profitable products, categories with the highest profit margins, high-revenue products with relatively low profit margins, and top customers by revenue contribution. These insights help highlight business opportunities, evaluate product and market performance, and better understand the factors influencing retail profitability.
+Query results and dashboard visualizations are included to demonstrate how SQL can transform raw retail data into meaningful business insights.
 
-Overall, this project demonstrates an end-to-end retail analytics workflow, combining SQL querying and Power BI visualization to convert raw sales data into clear, meaningful, and business-focused insights.
+## 🎯 Project Objectives
 
-## Project Objectives
-
-- Clean and prepare retail data for reliable analysis.
-- Analyze overall sales performance and monthly sales trends.
-- Identify top-selling products, high-revenue brands, and leading product categories.
-- Evaluate customer distribution and identify the highest-revenue customers.
+- Assess data quality by identifying missing values and duplicate records.
+- Validate sales transactions, product pricing, and exchange-rate information.
+- Analyze sales quantity and order trends over time.
+- Identify top-performing products, brands, and categories.
+- Calculate revenue, profit, and profit margins.
+- Identify high-revenue customers and countries.
 - Compare online and physical-store sales performance.
-- Measure product profitability and category-level profit margins.
-- Explore revenue performance across different countries.
-- Build interactive Power BI reports to communicate findings effectively.
+- Present analytical results through query outputs and visualizations.
 
-## Tools and Technologies
+## 🛠️ Tools & Technologies
 
-- **SQL:** Data cleaning, data exploration, aggregations, joins, and business analysis.
-- **Power BI:** Interactive dashboards, data visualization, and reporting.
-- **GitHub:** Version control and project documentation.
+- **MySQL** — SQL querying, data validation, and analysis.
+- **MySQL Workbench** — Query execution and result inspection.
+- **Power BI** — Data visualization and dashboard reporting.
+- **Git & GitHub** — Version control and project documentation.
 
-## Key Areas of Analysis
+## 🗂️ Database Tables
 
-1. **Sales Performance Analysis:** Total quantity sold, unique orders, and monthly and yearly sales trends.
-2. **Product and Category Analysis:** Top-selling products, category revenue, brand revenue, and units sold.
-3. **Customer Analysis:** Customer distribution by country and top customers by revenue.
-4. **Geographical Analysis:** Revenue comparison across countries.
-5. **Sales Channel Analysis:** Revenue and quantity comparison between online and physical stores.
-6. **Profitability Analysis:** Total product profit, category profit margins, and high-revenue products with low profit margins.
-7. **Power BI Dashboard:** Visual presentation of retail performance metrics and analytical findings.
+The project works with the following tables:
 
-## Expected Business Value
+| Table | Purpose |
+|---|---|
+| `Sales` | Order details, dates, product keys, quantities, and currency codes |
+| `Products` | Product names, brands, categories, costs, and prices |
+| `Customers` | Customer details and geographic information |
+| `Stores` | Store information and sales-channel identification |
+| `Exchange_Rates` | Currency exchange rates by date |
 
-The analysis helps identify revenue drivers, understand customer purchasing patterns, recognize profitable products and categories, compare sales channels, and monitor business performance over time. These findings can support more informed decisions about product strategy, customer engagement, sales channels, and profitability improvement.
+## 🧹 Data Cleaning & Quality Assessment
 
+The data quality assessment uses SQL queries to investigate:
+
+- Missing values in important columns.
+- Duplicate sales line items and duplicate keys.
+- Invalid or non-positive quantities.
+- Products with selling prices below their unit costs.
+- Missing or invalid order and delivery dates.
+- Inconsistent text formatting, such as leading or trailing spaces.
+- Missing customer, product, store, or exchange-rate references.
+- Duplicate exchange rates for the same date and currency.
+
+These checks help identify potential data quality issues before interpreting the analytical results.
+
+### Example: Missing-value assessment
+
+```sql
+SELECT
+    COUNT(*) AS Total_Rows,
+    SUM(Order_Number IS NULL) AS Missing_Order_Number,
+    SUM(Order_Date IS NULL) AS Missing_Order_Date,
+    SUM(CustomerKey IS NULL) AS Missing_CustomerKey,
+    SUM(StoreKey IS NULL) AS Missing_StoreKey,
+    SUM(ProductKey IS NULL) AS Missing_ProductKey,
+    SUM(Quantity IS NULL) AS Missing_Quantity,
+    SUM(Currency_Code IS NULL) AS Missing_Currency
+FROM Sales;
+```
+
+**Query output:** See `images/data-quality-results.png`.
+
+## 📊 Sales & Customer Analysis
+
+This section explores sales activity and customer distribution.
+
+Key analyses include:
+
+- Total quantity sold.
+- Number of unique orders.
+- Number of unique customers.
+- Monthly and yearly sales quantities.
+- Top 10 products by quantity sold.
+- Countries with the largest customer populations.
+
+### Example: Top 10 products by quantity sold
+
+```sql
+SELECT
+    p.Product_Name,
+    SUM(s.Quantity) AS Total_Quantity
+FROM Sales AS s
+JOIN Products AS p
+    ON s.ProductKey = p.ProductKey
+GROUP BY p.ProductKey, p.Product_Name
+ORDER BY Total_Quantity DESC
+LIMIT 10;
+```
+
+**Query output:** See `images/top-products-output.png`.
+
+## 💰 Profitability & Advanced Sales Analysis
+
+Using product unit prices and costs, the project calculates product-level and category-level profitability.
+
+Key analyses include:
+
+- Products with the highest total profit.
+- Categories with the highest profit margins.
+- High-revenue products with relatively low profit margins.
+- Monthly revenue and profit trends.
+- Top 10 customers by revenue contribution.
+
+### Example: Products with the highest total profit
+
+```sql
+SELECT
+    p.Product_Name,
+    SUM(
+        s.Quantity *
+        (p.Unit_Price_USD - p.Unit_Cost_USD)
+    ) AS Total_Profit
+FROM Sales AS s
+JOIN Products AS p
+    ON s.ProductKey = p.ProductKey
+GROUP BY p.ProductKey, p.Product_Name
+ORDER BY Total_Profit DESC;
+```
+
+**Query output:** See `images/product-profit-output.png`.
+
+*Note: These calculations use unit prices and costs in USD. If the source sales records contain multiple transaction currencies, revenue and profit should be calculated using consistently converted amounts and the appropriate exchange rates.*
+
+## 📈 Revenue & Product Performance
+
+This section compares business performance across products, categories, brands, countries, and sales channels.
+
+The analysis includes:
+
+- Categories generating the highest revenue.
+- Brands generating the highest revenue.
+- Countries contributing the most revenue.
+- Top 10 customers by revenue.
+- Online versus physical-store revenue and sales quantity.
+- Categories with the highest units sold.
+
+### Example: Online vs. physical-store sales
+
+```sql
+SELECT
+    CASE
+        WHEN s.StoreKey = 0 THEN 'Online'
+        ELSE 'Physical Store'
+    END AS Sales_Channel,
+    SUM(s.Quantity * p.Unit_Price_USD) AS Revenue,
+    SUM(s.Quantity) AS Quantity
+FROM Sales AS s
+JOIN Products AS p
+    ON s.ProductKey = p.ProductKey
+GROUP BY
+    CASE
+        WHEN s.StoreKey = 0 THEN 'Online'
+        ELSE 'Physical Store'
+    END;
+```
+
+**Query output:** See `images/sales-channel-output.png`.
+
+## 🖼️ Visualizations Results
+
+### Power BI Dashboard
+
+![Power BI dashboard](images/retail-sales-dashboard.png)
+
+*Replace this image with a screenshot of your actual Power BI dashboard.*
+
+
+
+```
+
+## 💡 Key Skills Demonstrated
+
+- SQL data quality assessment
+- Aggregate functions and conditional logic
+- Joins across relational tables
+- Duplicate and referential-integrity checks
+- Date-based analysis
+- Business KPI calculations
+- Revenue, profit, and profit-margin analysis
+- Ranking and top-N analysis
+- Data visualization and reporting
+
+## 🚀 Conclusion
+
+This project demonstrates how SQL can be used to assess retail data quality, analyze customer and product performance, and calculate business metrics that support data-driven decisions.
+
+Combining SQL analysis with Power BI visualizations provides a clear way to communicate findings and turn query results into actionable business insights.
+
+---
+
+**Author:** Mahzuzah Afrin
+
+**Tools:** MySQL | MySQL Workbench | Power BI | GitHub
