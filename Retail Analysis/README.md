@@ -86,7 +86,7 @@ Key analyses include:
 
 ### Example: Products with the highest total profit
 
-![Retail Sales Analysis](<output of sql/Screenshot 2026-10-19 230700.png>)
+![Retail Sales Analysis](<Output/Screenshot 2026-10-25 230837.png>)
 
 *Note: These calculations use unit prices and costs in USD. If the source sales records contain multiple transaction currencies, revenue and profit should be calculated using consistently converted amounts and the appropriate exchange rates.*
 
