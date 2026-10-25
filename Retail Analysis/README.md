@@ -110,14 +110,9 @@ The analysis includes:
 ## 🖼️ Visualizations Results
 
 ### Power BI Dashboard
-
-![Power BI dashboard](<Output/Recording 2026-10-25 232345.mp4>)
-
-*Replace this image with a screenshot of your actual Power BI dashboard.*
-
-
-
-```
+![Retail Sales Analysis](<Output/Screenshot 2026-10-25 231021.png>)
+![Retail Sales Analysis](<Output/Screenshot 2026-10-25 231021.png>)
+![Retail Sales Analysis](<Output/Screenshot 2026-10-25 231021.png>)
 
 ## 💡 Key Skills Demonstrated
 
