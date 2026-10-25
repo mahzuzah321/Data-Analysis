@@ -54,21 +54,7 @@ The data quality assessment uses SQL queries to investigate:
 These checks help identify potential data quality issues before interpreting the analytical results.
 
 ### Example: Missing-value assessment
-
-```sql
-SELECT
-    COUNT(*) AS Total_Rows,
-    SUM(Order_Number IS NULL) AS Missing_Order_Number,
-    SUM(Order_Date IS NULL) AS Missing_Order_Date,
-    SUM(CustomerKey IS NULL) AS Missing_CustomerKey,
-    SUM(StoreKey IS NULL) AS Missing_StoreKey,
-    SUM(ProductKey IS NULL) AS Missing_ProductKey,
-    SUM(Quantity IS NULL) AS Missing_Quantity,
-    SUM(Currency_Code IS NULL) AS Missing_Currency
-FROM Sales;
-```
-
-**Query output:** See `images/data-quality-results.png`.
+![Retail Sales Analysis](<output of sql/Screenshot 2026-10-19 230700.png>)
 
 ## 📊 Sales & Customer Analysis
 
@@ -84,20 +70,7 @@ Key analyses include:
 - Countries with the largest customer populations.
 
 ### Example: Top 10 products by quantity sold
-
-```sql
-SELECT
-    p.Product_Name,
-    SUM(s.Quantity) AS Total_Quantity
-FROM Sales AS s
-JOIN Products AS p
-    ON s.ProductKey = p.ProductKey
-GROUP BY p.ProductKey, p.Product_Name
-ORDER BY Total_Quantity DESC
-LIMIT 10;
-```
-
-**Query output:** See `images/top-products-output.png`.
+![Retail Sales Analysis](<output of sql/Screenshot 2026-10-19 230700.png>)
 
 ## 💰 Profitability & Advanced Sales Analysis
 
@@ -113,21 +86,7 @@ Key analyses include:
 
 ### Example: Products with the highest total profit
 
-```sql
-SELECT
-    p.Product_Name,
-    SUM(
-        s.Quantity *
-        (p.Unit_Price_USD - p.Unit_Cost_USD)
-    ) AS Total_Profit
-FROM Sales AS s
-JOIN Products AS p
-    ON s.ProductKey = p.ProductKey
-GROUP BY p.ProductKey, p.Product_Name
-ORDER BY Total_Profit DESC;
-```
-
-**Query output:** See `images/product-profit-output.png`.
+![Retail Sales Analysis](<output of sql/Screenshot 2026-10-19 230700.png>)
 
 *Note: These calculations use unit prices and costs in USD. If the source sales records contain multiple transaction currencies, revenue and profit should be calculated using consistently converted amounts and the appropriate exchange rates.*
 
@@ -146,25 +105,7 @@ The analysis includes:
 
 ### Example: Online vs. physical-store sales
 
-```sql
-SELECT
-    CASE
-        WHEN s.StoreKey = 0 THEN 'Online'
-        ELSE 'Physical Store'
-    END AS Sales_Channel,
-    SUM(s.Quantity * p.Unit_Price_USD) AS Revenue,
-    SUM(s.Quantity) AS Quantity
-FROM Sales AS s
-JOIN Products AS p
-    ON s.ProductKey = p.ProductKey
-GROUP BY
-    CASE
-        WHEN s.StoreKey = 0 THEN 'Online'
-        ELSE 'Physical Store'
-    END;
-```
-
-**Query output:** See `images/sales-channel-output.png`.
+![Retail Sales Analysis](<output of sql/Screenshot 2026-10-19 230700.png>)
 
 ## 🖼️ Visualizations Results
 
