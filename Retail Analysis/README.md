@@ -105,7 +105,7 @@ The analysis includes:
 
 ### Example: Online vs. physical-store sales
 
-![Retail Sales Analysis](<output of sql/Screenshot 2026-10-19 230700.png>)
+![Retail Sales Analysis](<Output/Screenshot 2026-10-25 231021.png>)
 
 ## 🖼️ Visualizations Results
 
