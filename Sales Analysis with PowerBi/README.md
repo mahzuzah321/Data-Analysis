@@ -13,7 +13,7 @@ The dashboard includes three report pages — **Summary, Analysis, and Details**
 
 Get a high-level overview of business performance through KPI cards and interactive charts.
 
-![Sales Dashboard Summary](images/sales-summary.png)
+![Sales Dashboard Summary](<Image/Screenshot 2026-10-26 215744.png>)
 
 **Key Features:**
 - Monitor key sales and profit indicators.
