@@ -76,9 +76,6 @@ Dive deeper into the underlying data using detailed tables and comparative visua
 - **Clean Dashboard Design:** Improve readability through a consistent visual layout.
 
 
-```
-
-
 ## 💡 Business Value
 
 This project demonstrates how Power BI can transform sales data into an interactive analytical experience. By combining KPI monitoring, geographic analysis, comparative visualizations, and detailed reporting, the dashboard supports business performance evaluation and data-driven decision-making.
