@@ -75,25 +75,9 @@ Dive deeper into the underlying data using detailed tables and comparative visua
 - **Report Navigation:** Move between Summary, Analysis, and Details pages.
 - **Clean Dashboard Design:** Improve readability through a consistent visual layout.
 
-## 📂 Repository Structure
 
-```text
-Sales-Analysis-Power-BI/
-├── README.md
-├── Sales.pbix
-└── images/
-    ├── sales-summary.png
-    ├── sales-analysis.png
-    └── sales-details.png
 ```
 
-## 🚀 How to Use
-
-1. Clone or download this repository.
-2. Install [Microsoft Power BI Desktop](https://www.microsoft.com/power-platform/products/power-bi/desktop).
-3. Open `Sales.pbix` in Power BI Desktop.
-4. Explore the Summary, Analysis, and Details report pages.
-5. Use the available slicers and filters to investigate sales performance.
 
 ## 💡 Business Value
 
@@ -103,10 +87,6 @@ This project demonstrates how Power BI can transform sales data into an interact
 
 **Mahzuzah Afrin**
 
-- GitHub: [@mahzuzah321](https://github.com/mahzuzah321)
 
----
-
-⭐ If you find this project useful, consider giving the repository a star!
 
 
