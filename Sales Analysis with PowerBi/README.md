@@ -37,7 +37,7 @@ Explore sales performance across geographic areas and business categories.
 
 Dive deeper into the underlying data using detailed tables and comparative visualizations.
 
-![Sales Details Dashboard](images/sales-details.png)
+![Sales Details Dashboard](<Image/Screenshot 2026-10-26 220406.png>)
 
 **Key Features:**
 - Examine detailed sales records.
