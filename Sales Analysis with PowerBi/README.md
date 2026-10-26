@@ -25,7 +25,7 @@ Get a high-level overview of business performance through KPI cards and interact
 
 Explore sales performance across geographic areas and business categories.
 
-![Sales Analysis Dashboard](images/sales-analysis.png)
+![Sales Analysis Dashboard](<Image/Screenshot 2026-10-26 220335.png>)
 
 **Key Features:**
 - Visualize geographic sales distribution using a map.
